@@ -2,6 +2,7 @@ import { Component, signal } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { Producte } from './interficies/Producte'; // PER PODER USAR LA interface de TIPUS producte que s'ha d'importar
 import { producte as ProducteClass } from './producte'; // IMPORTEM LA CLASSE PRODUCTE 
+import { Basket } from './models/basket';
 
 @Component({
   selector: 'app-root',
@@ -9,6 +10,7 @@ import { producte as ProducteClass } from './producte'; // IMPORTEM LA CLASSE PR
   templateUrl: './app.html',
   styleUrl: './app.css'
 })
+
 export class App {
   protected readonly title = signal('prueba1');
 
@@ -65,5 +67,18 @@ p2 = new ProducteClass('Airpods', 249.99);
   } 
 
 
+  // Part B: Dades mock i funcions
+  // Un array de mínim 5 elements del teu tema que compleixi la interfície
+
+  basket: Basket[] = [
+    { id: 1, nom: 'Lleida', equip: 'iLERNA Lleida', jugadors: 12, partits: 20, guanyador: true },
+    { id: 2, nom: 'Barcelona', equip: 'FC Barcelona Baloncesto', jugadors: 15, partits: 25, guanyador: false },
+    { id: 3, nom: 'Madrid', equip: 'Real Madrid Baloncesto', jugadors: 14, partits: 26, guanyador: true },
+    { id: 4, nom: 'Valencia', equip: 'Valencia Basket', jugadors: 13, partits: 24, guanyador: false },
+    { id: 5, nom: 'Malaga', equip: 'Unicaja Baloncesto', jugadors: 16, partits: 20, guanyador: true }
+  ];
+
+
+  // funció getActius() (o similar) que retorni els elements amb boolean = true
 
 }
