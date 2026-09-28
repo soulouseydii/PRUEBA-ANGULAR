@@ -54,8 +54,6 @@ export class App {
 // 3. creeu un nou producte i mostreu el descompte per consola
 // 4. cerqueu la manera de mostrar el descompte amb un popup
 
-
-
 p2 = new ProducteClass('Airpods', 249.99);
 
 
