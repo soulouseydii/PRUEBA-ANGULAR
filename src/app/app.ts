@@ -1,14 +1,15 @@
 import { Component, signal } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
-import { Producte } from './interficies/producte'; // PER PODER USAR LA interface de TIPUS producte que s'ha d'importar
+import { Producte } from './interficies/Producte'; // PER PODER USAR LA interface de TIPUS producte que s'ha d'importar
 import { producte as ProducteClass } from './producte'; // IMPORTEM LA CLASSE PRODUCTE 
 import { Basket } from './models/basket';
 import { funcions } from './models/funcions';
-
+import { Tarjets } from './components/tarjets/tarjets';
+import { Perfil } from './components/perfil/perfil';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet],
+  imports: [RouterOutlet, Perfil, Tarjets],
   templateUrl: './app.html',
   styleUrl: './app.css'
 })
