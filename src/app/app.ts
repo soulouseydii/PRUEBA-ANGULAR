@@ -3,6 +3,8 @@ import { RouterOutlet } from '@angular/router';
 import { Producte } from './interficies/producte'; // PER PODER USAR LA interface de TIPUS producte que s'ha d'importar
 import { producte as ProducteClass } from './producte'; // IMPORTEM LA CLASSE PRODUCTE 
 import { Basket } from './models/basket';
+import { funcions } from './models/funcions';
+
 
 @Component({
   selector: 'app-root',
@@ -97,6 +99,6 @@ p2 = new ProducteClass('Airpods', 249.99);
     return `Nom: ${element.nom}, Equip: ${element.equip}, Jugadors: ${element.jugadors}, Partits: ${element.partits}, Guanyador: ${element.guanyador}`;
   }
 
-  
+
   
 }
