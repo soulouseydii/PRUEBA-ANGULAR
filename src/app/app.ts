@@ -1,6 +1,6 @@
 import { Component, signal } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
-import { Producte } from './interficies/Producte'; // PER PODER USAR LA interface de TIPUS producte que s'ha d'importar
+import { Producte } from './interficies/producte'; // PER PODER USAR LA interface de TIPUS producte que s'ha d'importar
 import { producte as ProducteClass } from './producte'; // IMPORTEM LA CLASSE PRODUCTE 
 import { Basket } from './models/basket';
 
@@ -81,4 +81,22 @@ p2 = new ProducteClass('Airpods', 249.99);
 
   // funció getActius() (o similar) que retorni els elements amb boolean = true
 
+  getActius(): Basket[] {
+    return this.basket.filter(equip => equip.guanyador === true);
+  }
+
+  // funció findById(id: number) que retorni un element o undefined
+
+  findById(id: number): Basket | undefined {
+    return this.basket.find(equip => equip.id === id);
+  }
+
+  // Una funció formatarElement(element) que retorni un string amb informació de l'element
+
+  formatarElement(element:Basket): string {
+    return `Nom: ${element.nom}, Equip: ${element.equip}, Jugadors: ${element.jugadors}, Partits: ${element.partits}, Guanyador: ${element.guanyador}`;
+  }
+
+  
+  
 }
