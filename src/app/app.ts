@@ -1,11 +1,12 @@
 import { Component, signal } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
-import { Producte } from './interficies/Producte'; // PER PODER USAR LA interface de TIPUS producte que s'ha d'importar
+import { Producte } from './interficies/producte'; // PER PODER USAR LA interface de TIPUS producte que s'ha d'importar
 import { producte as ProducteClass } from './producte'; // IMPORTEM LA CLASSE PRODUCTE 
 import { Basket } from './models/basket';
 import { funcions } from './models/funcions';
 import { Tarjets } from './components/tarjets/tarjets';
 import { Perfil } from './components/perfil/perfil';
+import { Alumne } from './models/alumne';
 
 @Component({
   selector: 'app-root',
@@ -101,5 +102,28 @@ p2 = new ProducteClass('Airpods', 249.99);
   }
 
 
+
+  // Comprobar que les funcions de la classe funcions funcionen correctament
+  constructor2() {
+    // saludar('Soulou');
+
+    /*console.log(esMajorEdat(20));
+    console.log(sumarArray([1, 2, 3, 4, 5]));
+    */
+  }
+
+
+  // Instàncies de Alumnes
+
+  alumne1 = new Alumne('Soulou', 18, 'DAW', [10, 8, 7]);
+  alumne2 = new Alumne('Eric', 19, 'DAM', [6, 4, 2]);
+
+
+  // Comprobar que les funcions de la classe Alumne funcionen correctament
+  
+  constructor3() {
+      console.log(this.alumne1.presentar());
+      console.log(this.alumne1.gethaAprobat());
+  }
   
 }
